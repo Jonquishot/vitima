@@ -22,48 +22,11 @@
             max-width: 100%;
             max-height: 100%;
         }
-        /* Novo estilo para o vídeo */
-        .video-container {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2; /* Coloca o vídeo na frente da imagem */
-        }
-        video {
-            max-width: 100%;
-            max-height: 100vh;
-            object-fit: contain;
-        }
     </style>
 </head>
 <body>
     <!-- Mantém a imagem de fundo original -->
     <img src="Vitima.png" alt="Imagem de Fundo">
-
-    <!-- Adiciona o container do vídeo -->
-    <div class="video-container">
-        <video autoplay loop muted playsinline>
-            <source src="Dragon.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos HTML5.
-        </video>
-    </div>
-
-    <script>
-        // Script para garantir que o vídeo comece a tocar automaticamente
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.querySelector('video');
-            
-            // Tentar iniciar o vídeo
-            video.play().catch(function(error) {
-                console.log("Erro ao reproduzir vídeo:", error);
-            });
-
-            // Reiniciar o vídeo quando terminar
-            video.addEventListener('ended', function() {
-                video.play();
-            });
-        });
     </script>
 </body>
 </html>
